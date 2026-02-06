@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import SpecCard from "./SpecCard";
 import SpecControls from "./SpecControls";
+import SpecHexagon from "./SpecHexagon";
 import { EmptyState, ErrorState, LoadingState } from "./SpecStates";
 import { profile, type FetchMode } from "./spec-data";
 import { useSpecs } from "./useSpecs";
@@ -60,10 +61,13 @@ export default function SpecDashboard() {
         ) : state.status === "empty" ? (
           <EmptyState />
         ) : (
-          <section className="grid gap-6 md:grid-cols-2">
-            {state.items.map((item) => (
-              <SpecCard key={item.id} item={item} />
-            ))}
+          <section className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+            <SpecHexagon items={state.items} />
+            <div className="grid gap-6 md:grid-cols-2">
+              {state.items.map((item) => (
+                <SpecCard key={item.id} item={item} />
+              ))}
+            </div>
           </section>
         )}
       </div>
