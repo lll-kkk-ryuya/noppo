@@ -30,6 +30,9 @@ export default function SpecDashboard() {
               <span className="rounded-full border border-white/15 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-slate-200">
                 {profile.tag}
               </span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-400">
+                Repo: noppo
+              </span>
               <span className="font-mono text-xs uppercase tracking-[0.3em] text-emerald-200/80">
                 {profile.subtitle}
               </span>
