@@ -61,14 +61,14 @@ export default function SpecDashboard() {
         ) : state.status === "empty" ? (
           <EmptyState />
         ) : (
-          <section className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <div className="grid gap-6 lg:grid-cols-[1.05fr_1fr]">
             <SpecHexagon items={state.items} />
-            <div className="grid gap-6 md:grid-cols-2">
+            <section className="grid gap-6 md:grid-cols-2">
               {state.items.map((item) => (
                 <SpecCard key={item.id} item={item} />
               ))}
-            </div>
-          </section>
+            </section>
+          </div>
         )}
       </div>
     </div>
